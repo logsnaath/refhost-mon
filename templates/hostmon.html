@@ -1,0 +1,82 @@
+<!DOCTYPE html
+Author: Logu R [logu.rangasamy@suse.com]
+>
+<html>
+<head>
+    <title>RefHosts Status</title>
+    <link rel="stylesheet" href="/static/css/hostmon.css">
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico"/>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="location-link" onclick="updateFilter()">Refresh</div>
+
+        Locations
+        <select id="locationFilter" onchange="updateFilter()">
+            <option value="" selected>All</option>
+            {% for filter in filters['location'] %}
+                <option value="{{ filter }}">{{ filter }}</option>
+            {% endfor %}
+            <!-- <option value="prague" selected>Prague</option> -->
+        </select>
+
+        Architectures
+        <select id="archFilter" onchange="updateFilter()">
+            <option value="" selected>All</option>
+            {% for filter in filters['arch'] %}
+                <option value="{{ filter }}">{{ filter }}</option>
+            {% endfor %}
+        </select>
+
+        Products
+        <select id="productFilter" onchange="updateFilter()">
+            <option value="" selected>All</option>
+            {% for filter in filters['product'] %}
+                <option value="{{ filter }}">{{ filter }}</option>
+            {% endfor %}
+        </select>
+
+        Versions
+        <select id="versionFilter" onchange="updateFilter()">
+            <option value="" selected>All</option>
+            {% for filter in filters['version'] %}
+                <option value="{{ filter }}">{{ filter }}</option>
+            {% endfor %}
+        </select>
+        <div class="location-link" onclick="resetFilters()">Reset</div>
+    </div>
+
+    <div class="content">
+        <table id="bannertbl1">
+            <tr style="background-color: #029f48;" >
+                <td id="locationHeader"> Location: </th>
+                <td id="archHeader"> Arch: </th>
+                <td id="productHeader"> Product: </th>
+                <td id="versionHeader"> Versions: </th>
+            </tr>
+         </table>
+
+         <div class="colored-line">
+            <div class="color-segment segment-1"></div>
+            <div class="color-segment segment-2"></div>
+            <div class="color-segment segment-3"></div>
+            <div class="color-segment segment-4"></div>
+            <div class="color-segment segment-5"></div>
+        </div>
+
+        <table id="hostinfotbl">
+            <tr>
+                <th>SNo</th>
+                <th>Node</th>
+                <th>Arch</th>
+                <th>Product</th>
+                <th>Version</th>
+                <th>Location</th>
+                <th>Network</th>
+                <th>SSH</th>
+            </tr>
+        </table>
+    </div>
+    <script src="/static/js/hostmon.js" defer></script>
+</body>
+</html>

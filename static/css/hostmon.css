@@ -1,0 +1,123 @@
+/*
+ * Author: Logu R<logu.rangasamy@suse.com>
+ *
+ */
+
+body {
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0; /* Reset default margin to ensure full viewport height */
+}
+
+.sidebar {
+    width: 120px;
+    background-color:#029f48!important;
+    /* background-color :#fe7c3f!important; */
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 3em;
+    margin-left: 2em;
+    margin-right: 5em;
+    border-color: #2b9438;
+    border-width: 1px;
+    border-style: solid;
+    font: 1em sans-serif;
+}
+
+.sidebar select {
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.location-link {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.highlight {
+    background-color: #4ddd3a;
+}
+
+.banner {
+    width: 100%;
+    background-color:rgb(255, 255, 255)!important;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    margin: 0;
+    padding-bottom: 10px;
+    font: 1em sans-serif;
+}
+
+.content {
+    width: 70%;
+    padding: 0px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    border: 0;
+}
+
+.colored-line {
+    display: flex;
+    height: 5px;
+    overflow: hidden;
+    min-width: 1000px;
+}
+
+.color-segment {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+}
+
+/* Specify your desired color segments */
+.segment-1 { background-color: #fe7c3f; }
+.segment-2 { background-color: #30ba78; }
+.segment-3 { background-color: #2453ff; }
+.segment-4 { background-color: #90ebcd; }
+.segment-5 { background-color: #000000; }
+
+table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #029f48;
+}
+
+th, td {
+    border: 1px solid #fafafa;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    text-indent: 30px;
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
+th {
+    /*background-color: #7c7d80;*/
+    background-color: #5a8175!important;
+}
+tr:nth-child(even) {
+    background-color: #bdbcbe;
+}
+tr:nth-child(odd) {
+    background-color: #d6d6d6;;
+}
+
+.down {
+    color: #ff0000;
+}
+.up {
+    color: #006500;
+}
